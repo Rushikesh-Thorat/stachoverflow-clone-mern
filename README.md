@@ -64,7 +64,7 @@ npm install
 
 ## 🔧 Environment Variables
 
-Create a `.env` file in both the `server` and `client` directories.
+Create a `.env` file in the `server`.
 
 ### Example `.env` for `server`:
 
