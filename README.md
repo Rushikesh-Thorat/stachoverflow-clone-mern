@@ -91,7 +91,7 @@ In a new terminal:
 
 ```bash
 cd client
-npm run dev
+npm start
 ```
 
 Open your browser and go to `http://localhost:3000`
