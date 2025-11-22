@@ -64,7 +64,7 @@ npm install
 
 ## 🔧 Environment Variables
 
-Create a `.env` file in both the `server` and `client` directories.
+Create a `.env` file in the `server`.
 
 ### Example `.env` for `server`:
 
@@ -91,10 +91,10 @@ In a new terminal:
 
 ```bash
 cd client
-npm run dev
+npm start
 ```
 
-Open your browser and go to `http://localhost:5173`
+Open your browser and go to `http://localhost:3000`
 
 ---
 
@@ -109,6 +109,12 @@ Open your browser and go to `http://localhost:5173`
 
 ---
 
+## 🎥Click To Watch Demo Video
+
+[![Watch on YouTube](https://img.youtube.com/vi/cN3qDJnyIPA/0.jpg)](https://www.youtube.com/watch?v=cN3qDJnyIPA)
+
+
+---
 
 [Download Documentation as PDF](00_Documentations/doc_for_git.pdf)
 ---
