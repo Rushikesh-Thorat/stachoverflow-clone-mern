@@ -1,5 +1,8 @@
 node_modules
+build
+dist
+.dockerignore
+Dockerfile
 npm-debug.log
-.DS_Store
 .env
 .git

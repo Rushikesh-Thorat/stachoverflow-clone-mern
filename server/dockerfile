@@ -1,19 +1,12 @@
 # server/Dockerfile
 FROM node:18-alpine
+
 WORKDIR /app
 
-# Install only production deps during final image build
 COPY package*.json ./
 RUN npm ci --only=production
 
-# Copy source
 COPY . .
 
-# If you have a build step (eg. TypeScript), change accordingly:
-# RUN npm run build
-
-ENV NODE_ENV=production
 EXPOSE 5000
-
-# Use the start script defined in package.json (change if needed)
-CMD ["npm", "start"]
+CMD ["npm","start"]   # adjust if your entry file name is different

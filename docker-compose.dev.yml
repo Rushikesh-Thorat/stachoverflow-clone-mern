@@ -1,0 +1,41 @@
+version: "3.8"
+services:
+  mongo:
+    image: mongo:6.0
+    volumes:
+      - mongo-data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  server:
+    image: node:18
+    working_dir: /app
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    command: sh -c "npm install && npx nodemon src/index.js"
+    environment:
+      NODE_ENV: development
+      MONGO_URI: mongodb://root:example@mongo:27017/yourdbname?authSource=admin
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+
+  client:
+    image: node:18
+    working_dir: /app
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    command: sh -c "npm install && npm start"
+    environment:
+      CHOKIDAR_USEPOLLING: "true"   # sometimes needed on Windows/VM
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server
+
+volumes:
+  mongo-data:

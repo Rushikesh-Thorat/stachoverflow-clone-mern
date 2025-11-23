@@ -1,0 +1,9 @@
+FROM node:18-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+# Install nodemon for hot reload
+RUN npm install -g nodemon
+COPY . .
+EXPOSE 5000
+CMD ["nodemon", "--legacy-watch", "src/index.js"]  # adjust entrypoint
