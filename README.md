@@ -3,7 +3,7 @@
 This is a full-stack web application inspired by [Stack Overflow](https://stackoverflow.com/) built using the **MERN** stack:
 - **MongoDB** for the database
 - **Express.js** and **Node.js** for the backend API
-- **React.js** for the frontend
+- **React.js** for the frontend.
 
 ---
 
